@@ -8,6 +8,7 @@ class Main {
         // Y or N input by user
          Scanner sc=new Scanner(System.in);
           String ans=sc.next();
+          int check=1;
              
         while(true)
         {   
@@ -35,6 +36,7 @@ class Main {
                         if(guessnum==ranum)
                         {
                         System.out.println("CORRECT!");
+                        check=1+1;
                         break;
                         }
                  }
@@ -44,6 +46,21 @@ class Main {
                  {
                 System.out.println("okay program exits");
                 break;
+                 }
+                 if(check==2)
+                 {
+                      System.out.println("Do you wanna play again? Y/N");
+                      String ans2=sc.next();
+                        if (ans2.equals("N"))
+                            {
+                            System.out.println("okay program exits");
+                            break;
+                                
+                            }
+                     if(ans2.equals("Y"))
+                     {
+                         continue;
+                     }
                  }
                   
             }
